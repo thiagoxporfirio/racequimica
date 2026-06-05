@@ -23,6 +23,7 @@ export function HomePage() {
         eyebrow="Race Química"
         title="Química de alta performance para fermentação e processos industriais"
         description="Profissionais com mais de 25 anos de experiência, operação em Sertaozinho-SP e linha completa para performance técnica no campo e na indústria."
+        showLogo
       />
 
       {/* Hero grid: brand card + image */}

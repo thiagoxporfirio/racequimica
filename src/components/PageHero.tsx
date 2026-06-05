@@ -1,10 +1,13 @@
+import logo from '../assets/logo.png';
+
 type PageHeroProps = {
   eyebrow: string;
   title: string;
   description: string;
+  showLogo?: boolean;
 };
 
-export function PageHero({ eyebrow, title, description }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, showLogo = false }: PageHeroProps) {
   return (
     <section
       className="rq-fade-up relative overflow-hidden rounded-3xl px-7 py-14 text-white shadow-2xl sm:px-12 sm:py-16"
@@ -40,17 +43,38 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
         aria-hidden="true"
       />
 
-      <div className="relative">
-        <p className="rq-slide-right rq-d50 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.3em] text-[#bedd8c]">
-          <span className="inline-block h-px w-6 bg-[#8bc53f]" aria-hidden="true" />
-          {eyebrow}
-        </p>
-        <h1 className="rq-fade-up rq-d150 relative mt-4 max-w-3xl font-['Outfit',sans-serif] text-3xl font-semibold leading-[1.15] tracking-[-0.01em] sm:text-5xl">
-          {title}
-        </h1>
-        <p className="rq-fade-up rq-d300 relative mt-5 max-w-2xl text-sm leading-relaxed text-[#c8d8ee] sm:text-base">
-          {description}
-        </p>
+      <div className={`relative flex items-center ${showLogo ? 'gap-8 sm:gap-12' : ''}`}>
+        <div className="flex-1">
+          <p className="rq-slide-right rq-d50 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.3em] text-[#bedd8c]">
+            <span className="inline-block h-px w-6 bg-[#8bc53f]" aria-hidden="true" />
+            {eyebrow}
+          </p>
+          <h1 className="rq-fade-up rq-d150 relative mt-4 max-w-3xl font-['Outfit',sans-serif] text-3xl font-semibold leading-[1.15] tracking-[-0.01em] sm:text-5xl">
+            {title}
+          </h1>
+          <p className="rq-fade-up rq-d300 relative mt-5 max-w-2xl text-sm leading-relaxed text-[#c8d8ee] sm:text-base">
+            {description}
+          </p>
+        </div>
+
+        {showLogo && (
+          <div className="rq-fade-up rq-d400 hidden shrink-0 sm:block">
+            <div
+              className="flex h-36 w-36 items-center justify-center rounded-2xl p-4 sm:h-44 sm:w-44"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                boxShadow: '0 4px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08)',
+              }}
+            >
+              <img
+                src={logo}
+                alt="Race Química"
+                className="h-full w-full object-contain drop-shadow-[0_4px_20px_rgba(139,197,63,0.4)]"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
