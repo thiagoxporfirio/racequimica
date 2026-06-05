@@ -5,8 +5,26 @@ import cloritoImg from '../assets/cloritoDeSodio.jpeg';
 import estoqueImg from '../assets/estoqueFabrica.jpeg';
 import monenImg from '../assets/MONEN-PRO.jpg';
 import rcFlokImg from '../assets/rcFlok.jpg';
+import rcCatVideo from '../assets/Polímero cationico RC CAT.mp4';
+import rcFlokVideo from '../assets/RC FLOK polímero anionico.mp4';
 import { PageHero } from '../components/PageHero';
+import { SolucoesQuimicas } from '../components/SolucoesQuimicas';
 import { contactInfo, fakeStats } from '../content/site';
+
+const videos = [
+  {
+    src: rcCatVideo,
+    title: 'Polímero Catiônico RC CAT',
+    description: 'Floculante catiônico de alta eficiência para decantação e tratamento de efluentes.',
+    tag: 'Floculação',
+  },
+  {
+    src: rcFlokVideo,
+    title: 'RC FLOK — Polímero Aniônico',
+    description: 'Polímero aniônico desenvolvido para processos de decantação na fermentação sucroalcooleira.',
+    tag: 'Fermentação',
+  },
+];
 
 const products = [
   { title: 'Clorito de Sódio', image: cloritoImg, tag: 'Controle microbiológico' },
@@ -113,8 +131,53 @@ export function HomePage() {
         ))}
       </section>
 
-      {/* Products */}
+      {/* Videos */}
       <section className="space-y-6">
+        <div>
+          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Em ação</p>
+          <h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0e2b64]">
+            Nossos produtos
+          </h2>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          {videos.map((video, i) => (
+            <article
+              key={video.title}
+              className={`rq-fade-up rq-d${(i + 1) * 100} group overflow-hidden rounded-2xl border border-[#c3ccda]/70 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#071846]/10`}
+            >
+              <div className="relative overflow-hidden rounded-t-2xl bg-[#071846]">
+                <video
+                  src={video.src}
+                  controls
+                  playsInline
+                  className="w-full"
+                  aria-label={video.title}
+                />
+              </div>
+              <div className="p-5">
+                <span className="inline-block rounded-full bg-[#8bc53f]/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#4a7a1e]">
+                  {video.tag}
+                </span>
+                <h3 className="mt-2 font-['Outfit',sans-serif] text-xl font-semibold text-[#102b62]">
+                  {video.title}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-[#5a6478]">{video.description}</p>
+                <span
+                  className="mt-4 block h-[2px] w-10 rounded-full"
+                  style={{ background: 'linear-gradient(90deg, #8bc53f, #bedd8c)' }}
+                />
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Solucoes Quimicas */}
+      <SolucoesQuimicas />
+
+      {/* Products */}
+      <section id="linha-de-produtos" className="space-y-6">
         <div className="flex items-end justify-between">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Portfólio</p>
@@ -136,17 +199,17 @@ export function HomePage() {
               key={product.title}
               className={`rq-fade-up rq-d${Math.min((index + 1) * 100, 500)} group relative overflow-hidden rounded-2xl border border-[#c3ccda]/70 bg-white shadow-sm transition-all duration-300 hover:border-[#8bc53f]/30 hover:shadow-lg hover:shadow-[#071846]/10`}
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden bg-[#f0f4f8]">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-full w-full object-contain p-3 transition duration-500 group-hover:scale-105"
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-[#071846]/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  className="absolute inset-0 bg-[#071846]/8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-t-2xl"
                   aria-hidden="true"
                 />
-                <span className="absolute right-3 top-3 rounded-full border border-white/30 bg-white/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm">
+                <span className="absolute right-3 top-3 rounded-full border border-[#0e2b64]/20 bg-white/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#0e2b64] backdrop-blur-sm">
                   {product.tag}
                 </span>
               </div>
