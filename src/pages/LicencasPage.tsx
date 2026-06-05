@@ -5,36 +5,77 @@ import { certificateItems } from '../content/site';
 
 export function LicencasPage() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-14">
       <PageHero
-        eyebrow="Licencas e Certificados"
-        title="Confianca tecnica com processos documentados"
-        description="Bloco institucional para apresentar licencas, certificados e evidencias da qualidade operacional da Race Quimica."
+        eyebrow="Licenças e Certificados"
+        title="Confiança técnica com processos documentados"
+        description="Evidências da qualidade operacional e conformidade regulatória da Race Química — licenças, certificados e controles auditáveis."
       />
 
+      {/* Product images */}
       <section className="grid gap-4 sm:grid-cols-2">
-        <article className="overflow-hidden rounded-2xl border border-[#c2cad7] bg-white">
-          <img src={cloritoImg} alt="Material tecnico Clorito de Sodio" className="h-72 w-full object-cover" />
-        </article>
-        <article className="overflow-hidden rounded-2xl border border-[#c2cad7] bg-white">
-          <img
-            src={antiespumanteImg}
-            alt="Material tecnico Antiespumante e Dispersante"
-            className="h-72 w-full object-cover"
-          />
-        </article>
-      </section>
-
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {certificateItems.map((item) => (
-          <article key={item} className="rounded-2xl border border-[#c2cbda] bg-linear-to-br from-white to-[#e8edf5] p-5 shadow-sm">
-            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#132f68] font-semibold text-[#bbdb8f]">
-              OK
+        {[
+          { src: cloritoImg, alt: 'Material técnico Clorito de Sódio' },
+          { src: antiespumanteImg, alt: 'Material técnico Antiespumante e Dispersante' },
+        ].map((img) => (
+          <article
+            key={img.alt}
+            className="rq-scale-in group overflow-hidden rounded-2xl border border-[#c2cad7]/70 bg-white shadow-sm"
+          >
+            <div className="relative h-72 overflow-hidden">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-[#071846]/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                aria-hidden="true"
+              />
             </div>
-            <h2 className="font-['Outfit',sans-serif] text-xl text-[#0f2a62]">{item}</h2>
-            <p className="mt-2 text-sm text-[#576278]">Placeholder para documento, validade e observacoes tecnicas.</p>
           </article>
         ))}
+      </section>
+
+      {/* Certificate grid */}
+      <section className="space-y-5">
+        <div>
+          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Documentação</p>
+          <h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0e2b64]">
+            Nossos certificados
+          </h2>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {certificateItems.map((item, i) => (
+            <article
+              key={item}
+              className={`rq-fade-up rq-d${Math.min((i + 1) * 100, 600)} group relative overflow-hidden rounded-2xl border border-[#c2cbda]/70 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#8bc53f]/35 hover:shadow-md hover:shadow-[#8bc53f]/8`}
+            >
+              <span
+                className="pointer-events-none absolute right-0 top-0 h-28 w-28 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                style={{ background: 'rgba(139,197,63,0.12)' }}
+                aria-hidden="true"
+              />
+              <div
+                className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl font-['Outfit',sans-serif] text-sm font-bold text-[#8bc53f] shadow-sm"
+                style={{
+                  background: 'linear-gradient(135deg, #071846 0%, #132f68 100%)',
+                  boxShadow: '0 2px 8px rgba(7,24,70,0.3)',
+                }}
+              >
+                {String(i + 1).padStart(2, '0')}
+              </div>
+              <h2 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#0f2a62]">{item}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-[#576278]">
+                Documento com validade, rastreabilidade de lote e observações técnicas aplicáveis.
+              </p>
+              <span
+                className="mt-4 block h-[2px] w-10 rounded-full transition-all duration-300 group-hover:w-14"
+                style={{ background: 'linear-gradient(90deg, #8bc53f, #bedd8c)' }}
+              />
+            </article>
+          ))}
+        </div>
       </section>
     </div>
   );
