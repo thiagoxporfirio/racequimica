@@ -47,6 +47,15 @@
 .rq-slide-right { animation: rqSlideRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .rq-line-grow   { animation: rqLineGrow 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; transform-origin: left; }
 
+@keyframes rqCarouselProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.rq-carousel-progress {
+  animation: rqCarouselProgress 5.5s linear both;
+}
+
 .rq-d50  { animation-delay: 0.05s; }
 .rq-d100 { animation-delay: 0.10s; }
 .rq-d150 { animation-delay: 0.15s; }

@@ -7,7 +7,8 @@ import monenImg from '../assets/MONEN-PRO.jpg';
 import rcFlokImg from '../assets/rcFlok.jpg';
 import rcCatVideo from '../assets/Polímero cationico RC CAT.mp4';
 import rcFlokVideo from '../assets/RC FLOK polímero anionico.mp4';
-import { PageHero } from '../components/PageHero';
+import { HeroCarousel } from '../components/HeroCarousel';
+import { SectorStrip } from '../components/SectorStrip';
 import { SolucoesQuimicas } from '../components/SolucoesQuimicas';
 import { contactInfo, fakeStats } from '../content/site';
 
@@ -37,12 +38,7 @@ const products = [
 export function HomePage() {
   return (
     <div className="space-y-16">
-      <PageHero
-        eyebrow="Race Química"
-        title="Química de alta performance para fermentação e processos industriais"
-        description="Profissionais com mais de 25 anos de experiência, operação em Sertaozinho-SP e linha completa para performance técnica no campo e na indústria."
-        showLogo
-      />
+      <HeroCarousel />
 
       {/* Hero grid: brand card + image */}
       <section className="rq-scale-in rq-d200 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
@@ -130,6 +126,9 @@ export function HomePage() {
           </article>
         ))}
       </section>
+
+      {/* Sector strip */}
+      <SectorStrip />
 
       {/* Videos */}
       <section className="space-y-6">
