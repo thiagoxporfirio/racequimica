@@ -1,5 +1,3 @@
-import antiespumanteImg from '../assets/Antiespumante.jpeg';
-import cloritoImg from '../assets/cloritoDeSodio.jpeg';
 import { PageHero } from '../components/PageHero';
 import { certificateItems } from '../content/site';
 
@@ -11,31 +9,6 @@ export function LicencasPage() {
         title="Confiança técnica com processos documentados"
         description="Evidências da qualidade operacional e conformidade regulatória da Race Química — licenças, certificados e controles auditáveis."
       />
-
-      {/* Product images */}
-      <section className="grid gap-4 sm:grid-cols-2">
-        {[
-          { src: cloritoImg, alt: 'Material técnico Clorito de Sódio' },
-          { src: antiespumanteImg, alt: 'Material técnico Antiespumante e Dispersante' },
-        ].map((img) => (
-          <article
-            key={img.alt}
-            className="rq-scale-in group overflow-hidden rounded-2xl border border-[#c2cad7]/70 bg-white shadow-sm"
-          >
-            <div className="relative h-72 overflow-hidden">
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-[#071846]/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                aria-hidden="true"
-              />
-            </div>
-          </article>
-        ))}
-      </section>
 
       {/* Certificate grid */}
       <section className="space-y-5">

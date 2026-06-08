@@ -10,13 +10,6 @@ export const navigationItems: NavigationItem[] = [
   { label: 'Contato', to: '/contato' },
 ];
 
-export const fakeStats = [
-  { label: 'Experiencia de mercado', value: '25+ anos' },
-  { label: 'Foco industrial', value: 'Alta performance' },
-  { label: 'Atendimento regional', value: 'Sertaozinho + regiao' },
-  { label: 'Canal ativo', value: 'Instagram + WhatsApp' },
-];
-
 export const certificateItems = [
   'Licenca Ambiental',
   'FISPQ Atualizada',

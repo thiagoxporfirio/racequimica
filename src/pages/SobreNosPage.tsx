@@ -1,107 +1,237 @@
+import type { ReactNode } from 'react';
+import cloritoImg from '../assets/cloritoDeSodio.jpeg';
 import estoqueImg from '../assets/estoqueFabrica.jpeg';
-import { PageHero } from '../components/PageHero';
+import logo from '../assets/logo.png';
 import { contactInfo } from '../content/site';
+
+const highlights = [
+  { value: '25+', label: 'anos de experiencia' },
+  { value: 'SP', label: 'base em Sertaozinho' },
+  { value: '24h', label: 'canal tecnico ativo' },
+];
 
 const pillars = [
   {
-    title: 'Compromisso técnico',
-    text: 'Química de alta performance para melhorar estabilidade e produtividade dos processos.',
+    title: 'Missao',
+    text: 'Fornecer solucoes quimicas de alta performance para processos industriais, com atendimento tecnico, qualidade no produto e foco em resultado operacional.',
     icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15M14.25 3.104c.251.023.501.05.75.082M19.8 15l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.5l.106.402c.368 1.38-.128 2.844-1.228 3.72L17 20.25m-10.5 0L5.322 18.672c-1.1-.876-1.596-2.34-1.228-3.72L4.2 14.5" />
-      </svg>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 21s7-4.25 7-11a7 7 0 1 0-14 0c0 6.75 7 11 7 11Zm0-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+      />
     ),
   },
   {
-    title: 'Relação de longo prazo',
-    text: 'Atendimento próximo com foco em resultado, qualidade e confiança no fornecimento.',
+    title: 'Visao',
+    text: 'Ser reconhecida pela confianca tecnica no setor sucroenergetico e por parcerias consistentes com industrias que buscam produtividade e seguranca.',
     icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-      </svg>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6Zm9 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+      />
     ),
   },
   {
-    title: 'Experiência de mercado',
-    text: 'Time com mais de 25 anos de experiência em operações e processos industriais.',
+    title: 'Valores',
+    text: 'Responsabilidade, transparencia, melhoria continua, respeito aos clientes e compromisso com praticas seguras em toda a cadeia de fornecimento.',
     icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
-      </svg>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 3 4.5 6.5v5.25c0 4.7 3.2 8.95 7.5 10.25 4.3-1.3 7.5-5.55 7.5-10.25V6.5L12 3Zm-3 9 2 2 4-4"
+      />
     ),
+  },
+];
+
+const timeline = [
+  {
+    year: 'Origem',
+    title: 'Experiencia aplicada ao setor industrial',
+    text: 'A Race Quimica nasceu da vivencia tecnica de profissionais com mais de duas decadas em processos de fermentacao, controle microbiologico e tratamento.',
+  },
+  {
+    year: 'Hoje',
+    title: 'Atendimento proximo e fornecimento confiavel',
+    text: 'Com base em Sertaozinho-SP, a empresa atende usinas e industrias com produtos selecionados, suporte comercial direto e acompanhamento das necessidades de campo.',
+  },
+  {
+    year: 'Futuro',
+    title: 'Pesquisa, qualidade e evolucao continua',
+    text: 'O foco e ampliar solucoes que reduzem perdas, melhoram estabilidade operacional e sustentam relacoes tecnicas de longo prazo.',
   },
 ];
 
 export function SobreNosPage() {
   return (
-    <div className="space-y-14">
-      <PageHero
-        eyebrow="Sobre Nós"
-        title="Race Química: alta performance com experiência de mercado"
-        description="Empresa de Sertãozinho-SP com foco técnico em produtos e suporte para processos industriais de fermentação e tratamento."
-      />
+    <div className="space-y-16">
+      <section className="rq-fade-up relative min-h-[520px] overflow-hidden rounded-[28px] bg-[#052363] text-white shadow-[0_18px_50px_rgba(5,35,99,0.26)]">
+        <img
+          src={estoqueImg}
+          alt="Estrutura de estoque e operacao da Race Quimica"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#052363]/62" aria-hidden="true" />
+        <div
+          className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#052363] to-transparent"
+          aria-hidden="true"
+        />
 
-      <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        {/* Main card */}
-        <article
-          className="rq-scale-in overflow-hidden rounded-3xl border border-[#c2cad8]/70 bg-white shadow-sm"
-        >
-          <div className="p-7 pb-5">
-            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Quem somos</p>
-            <h2 className="mt-2 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0f2a62]">
-              Nossa história
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-[#566277]">
-              {contactInfo.title} é uma empresa focada em {contactInfo.slogan.toLowerCase()}, com
-              atendimento técnico e comercial construído ao longo de décadas de experiência no setor industrial.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-[#566277]">
-              Localizados em Sertãozinho — o polo sucroenergético mais importante do Brasil — atendemos
-              usinas, indústrias de fermentação e plantas de tratamento com produtos de alto padrão técnico.
-            </p>
-            <div className="mt-4 inline-flex items-start gap-2 rounded-xl border border-[#c5cedb]/60 bg-[#f0f4f9] px-4 py-3 text-xs text-[#4d5e78]">
-              <svg className="mt-0.5 h-4 w-4 shrink-0 text-[#0e2b66]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
-              {contactInfo.address}
-            </div>
+        <div className="relative flex min-h-[520px] flex-col justify-end px-6 py-10 sm:px-10 lg:px-14">
+          <div className="mb-10 flex items-center justify-between gap-6">
+            <img src={logo} alt="Race Quimica" className="h-14 w-auto rounded-md p-2 shadow-lg sm:h-16" />
+            <span className="hidden h-px flex-1 bg-[#057a15] sm:block" aria-hidden="true" />
           </div>
-          <div className="overflow-hidden">
-            <img
-              src={estoqueImg}
-              alt="Centro de estoque Race Química"
-              className="h-64 w-full object-cover transition duration-500 hover:scale-[1.02]"
-            />
-          </div>
-        </article>
 
-        {/* Pillars */}
-        <div className="flex flex-col gap-4">
-          {pillars.map((pillar, i) => (
-            <article
-              key={pillar.title}
-              className={`rq-fade-up rq-d${(i + 1) * 150} group relative overflow-hidden rounded-2xl border border-[#c5cedd]/70 bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#8bc53f]/30 hover:shadow-md`}
-            >
-              <span
-                className="pointer-events-none absolute right-0 top-0 h-24 w-24 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
-                style={{ background: 'rgba(139,197,63,0.12)' }}
-                aria-hidden="true"
-              />
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#071846] text-[#8bc53f] shadow-sm">
-                {pillar.icon}
+          <p className="rq-slide-right text-sm font-semibold uppercase tracking-[0.32em] text-[#bedd8c]">
+            Sobre nos
+          </p>
+          <h1 className="mt-4 max-w-4xl font-['Outfit',sans-serif] text-4xl font-semibold leading-tight sm:text-6xl">
+            Quimica de alta performance para processos industriais.
+          </h1>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/82">
+            A Race Quimica combina experiencia de mercado, atendimento direto e solucoes voltadas a
+            eficiencia produtiva no setor sucroenergetico.
+          </p>
+
+          <div className="mt-10 grid gap-3 sm:grid-cols-3">
+            {highlights.map((item, index) => (
+              <div
+                key={item.label}
+                className={`rq-fade-up rq-d${(index + 1) * 100} border-l-4 border-[#057a15] bg-white/95 px-5 py-4 text-[#052363] shadow-lg`}
+              >
+                <p className="font-['Outfit',sans-serif] text-3xl font-semibold">{item.value}</p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#40506a]">{item.label}</p>
               </div>
-              <h3 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#112d66]">
-                {pillar.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-[#586378]">{pillar.text}</p>
-              <span
-                className="mt-4 block h-[2px] w-10 rounded-full transition-all duration-300 group-hover:w-14"
-                style={{ background: 'linear-gradient(90deg, #8bc53f, #bedd8c)' }}
-              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="rq-fade-up space-y-4">
+          <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#057a15]">Nossa historia</p>
+          <h2 className="font-['Outfit',sans-serif] text-3xl font-semibold leading-tight text-[#052363] sm:text-4xl">
+            Experiencia tecnica, presenca regional e compromisso com qualidade.
+          </h2>
+          <p className="text-sm leading-relaxed text-[#4f5f77]">
+            {contactInfo.title} atua em {contactInfo.slogan.toLowerCase()}, com profissionais que acumulam
+            mais de 25 anos de experiencia em operacoes industriais. A empresa esta instalada em Sertaozinho,
+            um dos principais polos do setor sucroenergetico brasileiro.
+          </p>
+          <p className="text-sm leading-relaxed text-[#4f5f77]">
+            O trabalho e conduzido com proximidade comercial, leitura tecnica dos processos e busca constante
+            por produtos que melhorem estabilidade, seguranca e custo-beneficio para clientes e parceiros.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {timeline.map((item, index) => (
+            <article
+              key={item.title}
+              className={`rq-fade-up rq-d${Math.min((index + 1) * 150, 400)} grid gap-4 border-l-4 border-[#057a15] bg-white px-5 py-5 shadow-sm sm:grid-cols-[110px_1fr]`}
+            >
+              <p className="font-['Outfit',sans-serif] text-xl font-semibold text-[#052363]">{item.year}</p>
+              <div>
+                <h3 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#102b62]">{item.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-[#5a6478]">{item.text}</p>
+              </div>
             </article>
           ))}
         </div>
       </section>
+
+      <section className="space-y-7">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#057a15]">Principios</p>
+            <h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#052363]">
+              Missao, visao e valores
+            </h2>
+          </div>
+          <span className="hidden h-px flex-1 bg-[#057a15]/45 sm:block" aria-hidden="true" />
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-3">
+          {pillars.map((pillar, index) => (
+            <PillarCard key={pillar.title} delay={Math.min((index + 1) * 150, 400)} title={pillar.title} icon={pillar.icon}>
+              {pillar.text}
+            </PillarCard>
+          ))}
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden rounded-[28px] bg-[#052363] text-white shadow-[0_16px_45px_rgba(5,35,99,0.24)]">
+        <img
+          src={cloritoImg}
+          alt="Produto quimico Race Quimica"
+          className="absolute right-0 top-0 hidden h-full w-1/2 object-cover opacity-35 lg:block"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#052363] via-[#052363]/95 to-[#052363]/72" aria-hidden="true" />
+        <div className="relative grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-14 lg:py-14">
+          <div>
+            <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#bedd8c]">
+              Politica da qualidade
+            </p>
+            <h2 className="mt-3 font-['Outfit',sans-serif] text-3xl font-semibold leading-tight sm:text-4xl">
+              Responsabilidade documentada em cada etapa.
+            </h2>
+          </div>
+          <div className="space-y-5 text-sm leading-relaxed text-white/84">
+            <p>
+              Atender aos requisitos dos clientes e demais requisitos aplicaveis, mantendo controles que
+              sustentem qualidade, rastreabilidade e confianca no fornecimento.
+            </p>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              <QualityItem>Melhoria continua dos processos e controles internos.</QualityItem>
+              <QualityItem>Produtos direcionados a eficiencia em processos industriais.</QualityItem>
+              <QualityItem>Equipe capacitada para atendimento tecnico e comercial.</QualityItem>
+              <QualityItem>Conduta responsavel nas relacoes com clientes e parceiros.</QualityItem>
+            </ul>
+            <p className="border-t border-white/15 pt-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#bedd8c]">
+              Departamento de Qualidade Race Quimica
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
+  );
+}
+
+function PillarCard({
+  title,
+  icon,
+  delay,
+  children,
+}: {
+  title: string;
+  icon: ReactNode;
+  delay: number;
+  children: ReactNode;
+}) {
+  return (
+    <article className={`rq-fade-up rq-d${delay} bg-white p-7 shadow-sm ring-1 ring-[#d1d8e3]`}>
+      <div className="mb-8 flex items-center gap-4">
+        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#057a15] text-white shadow-[0_8px_22px_rgba(5,122,21,0.22)]">
+          <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
+            {icon}
+          </svg>
+        </span>
+        <span className="h-px flex-1 bg-[#057a15]/35" aria-hidden="true" />
+      </div>
+      <h3 className="font-['Outfit',sans-serif] text-2xl font-semibold text-[#052363]">{title}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-[#5a6478]">{children}</p>
+    </article>
+  );
+}
+
+function QualityItem({ children }: { children: ReactNode }) {
+  return (
+    <li className="flex items-start gap-3">
+      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#057a15]" aria-hidden="true" />
+      <span>{children}</span>
+    </li>
   );
 }
