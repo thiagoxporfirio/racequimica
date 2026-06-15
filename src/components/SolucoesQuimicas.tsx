@@ -70,11 +70,11 @@ function GearIcon() {
 }
 
 const segments: Segment[] = [
-  { id: 'microbiologico', label: 'Controle Microbiológico', color: '#0e2b64', icon: <WaterDropIcon /> },
-  { id: 'fermentacao',    label: 'Fermentação',             color: '#1d6b4a', icon: <FlaskIcon /> },
-  { id: 'floculacao',     label: 'Floculação',              color: '#1a4a8a', icon: <FunnelIcon /> },
-  { id: 'performance',    label: 'Alta Performance',         color: '#4a7a1e', icon: <BoltIcon /> },
-  { id: 'eficiencia',     label: 'Eficiência Industrial',   color: '#2a3d6e', icon: <GearIcon /> },
+  { id: 'microbiologico', label: 'Controle Microbiológico', color: '#0f3316', icon: <WaterDropIcon /> },
+  { id: 'fermentacao',    label: 'Fermentação',             color: '#1a5c24', icon: <FlaskIcon /> },
+  { id: 'floculacao',     label: 'Floculação',              color: '#1a4db8', icon: <FunnelIcon /> },
+  { id: 'performance',    label: 'Alta Performance',         color: '#1f7a2e', icon: <BoltIcon /> },
+  { id: 'eficiencia',     label: 'Eficiência Industrial',   color: '#163d1e', icon: <GearIcon /> },
 ];
 
 const products: Product[] = [
@@ -113,7 +113,7 @@ const products: Product[] = [
 export function SolucoesQuimicas() {
   const [activeSegment, setActiveSegment] = useState(segments[0].id);
 
-  const activeColor = segments.find((s) => s.id === activeSegment)?.color ?? '#0e2b64';
+  const activeColor = segments.find((s) => s.id === activeSegment)?.color ?? '#0f3316';
   const filtered = products.filter((p) => p.segments.includes(activeSegment));
 
   return (
@@ -121,7 +121,7 @@ export function SolucoesQuimicas() {
       {/* Header */}
       <div className="text-center">
         <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Aplicações</p>
-        <h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0e2b64]">
+        <h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0f3316]">
           Soluções Químicas
         </h2>
       </div>
@@ -152,7 +152,7 @@ export function SolucoesQuimicas() {
                 </span>
                 {isActive && (
                   <span
-                    className="absolute -bottom-[10px] left-1/2 -translate-x-1/2 h-0 w-0"
+                    className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 h-0 w-0"
                     style={{
                       borderLeft: '10px solid transparent',
                       borderRight: '10px solid transparent',
@@ -172,7 +172,7 @@ export function SolucoesQuimicas() {
         {filtered.map((product, index) => (
           <article
             key={product.title}
-            className={`rq-fade-up rq-d${(index + 1) * 100} group relative overflow-hidden rounded-2xl border border-[#c3ccda]/70 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#071846]/10`}
+            className={`rq-fade-up rq-d${(index + 1) * 100} group relative overflow-hidden rounded-2xl border border-[#c3ccda]/70 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#0f3316]/10`}
             style={{ '--hover-color': activeColor } as React.CSSProperties}
           >
             <div className="relative h-52 overflow-hidden bg-[#f0f4f8]">
@@ -182,26 +182,25 @@ export function SolucoesQuimicas() {
                 className="h-full w-full object-contain p-3 transition duration-500 group-hover:scale-105"
               />
               <div
-                className="absolute inset-0 bg-gradient-to-t from-[#071846]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="absolute inset-0 bg-linear-to-t from-[#071c0b]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden="true"
               />
             </div>
 
             <div className="p-5">
-              <h3 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#102b62] transition-colors group-hover:text-[#0e2b64] leading-snug">
+              <h3 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#0f3316] transition-colors group-hover:text-[#1a4db8] leading-snug">
                 {product.title}
               </h3>
               <p className="mt-1.5 text-xs leading-relaxed text-[#5a6478]">{product.description}</p>
 
               <div className="mt-4 flex items-center justify-between">
                 <span
-                  className="block h-[2px] w-10 rounded-full transition-all duration-300 group-hover:w-16"
+                  className="block h-0.5 w-10 rounded-full transition-all duration-300 group-hover:w-16"
                   style={{ background: `linear-gradient(90deg, ${activeColor}, #8bc53f)` }}
                 />
                 <Link
                   to="/contato"
-                  className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.16em] transition-colors duration-200"
-                  style={{ color: activeColor }}
+                  className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#1a4db8] transition-colors duration-200 hover:text-[#0f3316]"
                   aria-label={`Ver produto ${product.title}`}
                 >
                   Ver produto
@@ -222,7 +221,7 @@ export function SolucoesQuimicas() {
       <div className="flex justify-center pt-2">
         <a
           href="#linha-de-produtos"
-          className="inline-flex items-center gap-2 rounded-full border-2 border-[#0e2b64]/25 px-8 py-3.5 text-sm font-semibold text-[#0e2b64] transition-all duration-200 hover:border-[#8bc53f] hover:bg-[#8bc53f]/8 hover:text-[#071846] active:scale-95"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-[#1a4db8]/30 px-8 py-3.5 text-sm font-semibold text-[#1a4db8] transition-all duration-200 hover:border-[#8bc53f] hover:bg-[#8bc53f]/8 hover:text-[#0f3316] active:scale-95"
         >
           Ver todos os produtos
         </a>

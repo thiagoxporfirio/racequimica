@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import estoqueImg from '../assets/estoqueFabrica.jpeg';
+import estoque3Img from '../assets/new/estoque3.jpeg';
 import antiespumanteImg from '../assets/Antiespumante.jpeg';
 import cloritoImg from '../assets/cloritoDeSodio.jpeg';
 import monenImg from '../assets/MONEN-PRO.jpg';
@@ -12,42 +12,42 @@ const sectors = [
     label: 'Etanol',
     image: rcFlokImg,
     description: 'Floculação e fermentação sucroalcooleira',
-    tint: 'rgba(7,24,70,0.48)',
+    tint: 'rgba(7,28,11,0.50)',
   },
   {
     key: 'acucar',
     label: 'Açúcar',
     image: monenImg,
     description: 'Controle de inibidores e rendimento',
-    tint: 'rgba(7,24,70,0.42)',
+    tint: 'rgba(7,28,11,0.44)',
   },
   {
     key: 'organicos',
     label: 'Orgânicos',
     image: antibioticosImg,
     description: 'Biocidas e antibióticos industriais',
-    tint: 'rgba(7,24,70,0.50)',
+    tint: 'rgba(7,28,11,0.52)',
   },
   {
     key: 'aguas',
     label: 'Águas',
     image: cloritoImg,
     description: 'Tratamento e controle microbiológico',
-    tint: 'rgba(4,18,58,0.52)',
+    tint: 'rgba(4,20,8,0.54)',
   },
   {
     key: 'industrial',
     label: 'Industrial',
-    image: estoqueImg,
+    image: estoque3Img,
     description: 'Soluções para processos industriais',
-    tint: 'rgba(7,24,70,0.44)',
+    tint: 'rgba(7,28,11,0.46)',
   },
   {
     key: 'agricolas',
     label: 'Agrícolas',
     image: antiespumanteImg,
     description: 'Antiespumantes e dispersantes de campo',
-    tint: 'rgba(7,40,20,0.46)',
+    tint: 'rgba(7,28,11,0.48)',
   },
 ];
 
@@ -71,25 +71,25 @@ export function SectorStrip() {
       ref={ref}
       aria-label="Setores de atuação"
       className="relative -mx-4 sm:-mx-6 lg:-mx-8 overflow-hidden"
-      style={{ background: 'linear-gradient(160deg, #071846 0%, #0d2558 50%, #0a1f3f 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #071c0b 0%, #0f3316 50%, #0a2410 100%)' }}
     >
       {/* Top fade edge */}
       <div
         className="absolute inset-x-0 top-0 h-16 z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to bottom, rgba(7,24,70,0.7), transparent)' }}
+        style={{ background: 'linear-gradient(to bottom, rgba(7,28,11,0.7), transparent)' }}
         aria-hidden="true"
       />
 
-      {/* Background aerial image with blue wash */}
+      {/* Background image with green wash */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <img
-          src={estoqueImg}
+          src={estoque3Img}
           alt=""
           className="h-full w-full object-cover opacity-10 scale-110 blur-sm"
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(160deg, rgba(7,24,70,0.92) 0%, rgba(10,31,65,0.85) 100%)' }}
+          style={{ background: 'linear-gradient(160deg, rgba(7,28,11,0.92) 0%, rgba(10,36,16,0.88) 100%)' }}
         />
       </div>
 
@@ -103,7 +103,7 @@ export function SectorStrip() {
         </p>
         <h2
           className="mt-2 font-['Outfit',sans-serif] text-3xl font-semibold leading-tight sm:text-4xl"
-          style={{ color: '#e8f0fb' }}
+          style={{ color: '#e8f8e0' }}
         >
           Setores de atuação
         </h2>
@@ -143,7 +143,7 @@ export function SectorStrip() {
             {i < sectors.length - 1 && (
               <div
                 className="absolute right-0 inset-y-0 w-px z-10 pointer-events-none"
-                style={{ background: 'rgba(255,255,255,0.12)' }}
+                style={{ background: 'rgba(255,255,255,0.10)' }}
                 aria-hidden="true"
               />
             )}
@@ -152,21 +152,17 @@ export function SectorStrip() {
             <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col items-center text-center">
               {/* Accent bar */}
               <span
-                className="block h-[3px] w-8 rounded-full mb-3 transition-all duration-300 group-hover:w-14"
+                className="block h-0.75 w-8 rounded-full mb-3 transition-all duration-300 group-hover:w-14"
                 style={{ background: 'linear-gradient(90deg, #8bc53f, #bedd8c)' }}
                 aria-hidden="true"
               />
 
-              <span
-                className="font-['Outfit',sans-serif] text-sm font-bold uppercase tracking-[0.14em] text-white"
-              >
+              <span className="font-['Outfit',sans-serif] text-sm font-bold uppercase tracking-[0.14em] text-white">
                 {s.label}
               </span>
 
               {/* Description — visible only on hover */}
-              <p
-                className="mt-1.5 text-[11px] leading-snug text-white/75 max-w-[120px] transition-all duration-400 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
-              >
+              <p className="mt-1.5 text-[11px] leading-snug text-white/75 max-w-30 transition-all duration-400 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
                 {s.description}
               </p>
             </div>
@@ -177,7 +173,7 @@ export function SectorStrip() {
       {/* Bottom fade edge */}
       <div
         className="absolute inset-x-0 bottom-0 h-8 z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to top, rgba(7,24,70,0.6), transparent)' }}
+        style={{ background: 'linear-gradient(to top, rgba(7,28,11,0.6), transparent)' }}
         aria-hidden="true"
       />
     </section>

@@ -7,19 +7,19 @@ export function Footer() {
     <footer
       className="relative mt-24 overflow-hidden text-slate-100"
       style={{
-        background: 'linear-gradient(155deg, #071846 0%, #0e2960 45%, #1b3052 80%, #2a3a4e 100%)',
+        background: 'linear-gradient(155deg, #071c0b 0%, #0f3316 45%, #0a2410 80%, #112a14 100%)',
         borderTop: '1px solid rgba(139,197,63,0.35)',
       }}
     >
       {/* Decorative glows */}
       <div
         className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full blur-3xl"
-        style={{ background: 'rgba(139,197,63,0.14)' }}
+        style={{ background: 'rgba(26,77,184,0.12)' }}
         aria-hidden="true"
       />
       <div
         className="pointer-events-none absolute -right-24 bottom-0 h-56 w-56 rounded-full blur-3xl"
-        style={{ background: 'rgba(168,186,210,0.12)' }}
+        style={{ background: 'rgba(139,197,63,0.10)' }}
         aria-hidden="true"
       />
       {/* Top accent line */}
@@ -41,7 +41,7 @@ export function Footer() {
               href={contactInfo.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#8bc53f] px-5 py-2.5 text-sm font-semibold text-[#071846] shadow-[0_2px_12px_rgba(139,197,63,0.3)] transition-all duration-200 hover:bg-[#9dd05d] hover:shadow-[0_4px_18px_rgba(139,197,63,0.45)] active:scale-95"
+              className="inline-flex items-center gap-2 rounded-full bg-[#1a4db8] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_12px_rgba(26,77,184,0.3)] transition-all duration-200 hover:bg-[#2560d4] hover:shadow-[0_4px_18px_rgba(26,77,184,0.45)] active:scale-95"
             >
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -53,7 +53,7 @@ export function Footer() {
               href={contactInfo.instagram}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-slate-200 transition-all duration-200 hover:border-[#8bc53f]/60 hover:text-[#bedd8c] active:scale-95"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#8bc53f]/35 px-5 py-2.5 text-sm font-semibold text-slate-200 transition-all duration-200 hover:border-[#8bc53f]/70 hover:text-[#bedd8c] active:scale-95"
             >
               Instagram
             </a>
@@ -97,9 +97,9 @@ export function Footer() {
         <div
           className="space-y-4 rounded-2xl p-5"
           style={{
-            background: 'rgba(255,255,255,0.05)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06)',
+            background: 'rgba(255,255,255,0.04)',
+            border: '1px solid rgba(139,197,63,0.15)',
+            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
           }}
         >
           <h3

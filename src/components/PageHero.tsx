@@ -12,8 +12,8 @@ export function PageHero({ eyebrow, title, description, showLogo = false }: Page
     <section
       className="rq-fade-up relative overflow-hidden rounded-3xl px-7 py-14 text-white shadow-2xl sm:px-12 sm:py-16"
       style={{
-        background: 'linear-gradient(135deg, #071846 0%, #0f2c65 55%, #1a3358 85%, #283d56 100%)',
-        boxShadow: '0 8px 40px rgba(7,24,70,0.35), 0 2px 8px rgba(7,24,70,0.2)',
+        background: 'linear-gradient(135deg, #071c0b 0%, #0f3316 55%, #1a4a1e 85%, #1e3d22 100%)',
+        boxShadow: '0 8px 40px rgba(7,28,11,0.4), 0 2px 8px rgba(7,28,11,0.2)',
       }}
     >
       {/* Decorative circles */}
@@ -27,12 +27,12 @@ export function PageHero({ eyebrow, title, description, showLogo = false }: Page
       />
       <div
         className="absolute -bottom-24 -left-12 h-64 w-64 rounded-full blur-3xl"
-        style={{ background: 'rgba(139,197,63,0.16)' }}
+        style={{ background: 'rgba(26,77,184,0.14)' }}
         aria-hidden="true"
       />
       <div
         className="absolute -bottom-16 right-1/3 h-40 w-40 rounded-full blur-2xl"
-        style={{ background: 'rgba(139,197,63,0.08)' }}
+        style={{ background: 'rgba(139,197,63,0.10)' }}
         aria-hidden="true"
       />
 
@@ -52,7 +52,7 @@ export function PageHero({ eyebrow, title, description, showLogo = false }: Page
           <h1 className="rq-fade-up rq-d150 relative mt-4 max-w-3xl font-['Outfit',sans-serif] text-3xl font-semibold leading-[1.15] tracking-[-0.01em] sm:text-5xl">
             {title}
           </h1>
-          <p className="rq-fade-up rq-d300 relative mt-5 max-w-2xl text-sm leading-relaxed text-[#c8d8ee] sm:text-base">
+          <p className="rq-fade-up rq-d300 relative mt-5 max-w-2xl text-sm leading-relaxed text-[#c8e0c0] sm:text-base">
             {description}
           </p>
         </div>
@@ -63,7 +63,7 @@ export function PageHero({ eyebrow, title, description, showLogo = false }: Page
               className="flex h-36 w-36 items-center justify-center rounded-2xl p-4 sm:h-44 sm:w-44"
               style={{
                 background: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(255,255,255,0.12)',
+                border: '1px solid rgba(139,197,63,0.18)',
                 boxShadow: '0 4px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08)',
               }}
             >

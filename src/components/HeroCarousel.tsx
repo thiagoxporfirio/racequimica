@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import antibioticosImg from '../assets/antibioticos.jpeg';
 import cloritoImg from '../assets/cloritoDeSodio.jpeg';
-import estoqueImg from '../assets/estoqueFabrica.jpeg';
+import estoque2Img from '../assets/new/estoque2.jpeg';
+import usinaImg from '../assets/new/usina.jpeg';
 import raceLogo from '../assets/logo.png';
 
 const INTERVAL_MS = 5500;
@@ -29,7 +30,7 @@ const SLIDES: SlideData[] = [
     cta: { label: 'Conhecer a empresa', to: '/sobre-nos' },
     secondary: { label: 'Falar com especialista', to: '/contato' },
     showLogo: true,
-    image: estoqueImg,
+    image: estoque2Img,
     stats: [
       { value: '25+', label: 'Anos de mercado' },
       { value: 'SP', label: 'Sertãozinho' },
@@ -63,6 +64,20 @@ const SLIDES: SlideData[] = [
       { value: 'Lote', label: 'Rastreável' },
     ],
   },
+  {
+    id: 3,
+    eyebrow: 'Setor sucroalcooleiro',
+    title: 'Do Campo à\nUsina com Eficiência',
+    description:
+      'Presente nas principais usinas do interior paulista, a Race Química entrega soluções técnicas que elevam a produtividade e reduzem perdas em cada ciclo produtivo.',
+    cta: { label: 'Solicitar proposta', to: '/contato' },
+    secondary: { label: 'Sobre a empresa', to: '/sobre-nos' },
+    image: usinaImg,
+    stats: [
+      { value: 'SP', label: 'Interior paulista' },
+      { value: '100%', label: 'Foco técnico' },
+    ],
+  },
 ];
 
 export function HeroCarousel() {
@@ -80,7 +95,7 @@ export function HeroCarousel() {
 
   return (
     <section
-      className="rq-scale-in relative left-1/2 -mt-10 min-h-[calc(100svh-92px)] w-screen -translate-x-1/2 overflow-hidden bg-[#071846]"
+      className="rq-scale-in relative left-1/2 -mt-10 min-h-[calc(100svh-92px)] w-screen -translate-x-1/2 overflow-hidden bg-[#071c0b]"
       aria-label="Race Química — apresentação da empresa"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -91,7 +106,7 @@ export function HeroCarousel() {
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute inset-0 z-10 opacity-[0.055]"
+        className="pointer-events-none absolute inset-0 z-10 opacity-[0.04]"
         style={{
           backgroundImage:
             'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
@@ -114,9 +129,10 @@ export function HeroCarousel() {
             style={{ transform: i === active ? 'scale(1.04)' : 'scale(1)' }}
             aria-hidden="true"
           />
-          <div className="absolute inset-0 bg-[#071846]/58" aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#06143d]/95 via-[#071846]/70 to-[#071846]/25" aria-hidden="true" />
-          <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#071846] to-transparent" aria-hidden="true" />
+          {/* Verde escuro overlay principal */}
+          <div className="absolute inset-0 bg-[#071c0b]/60" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#051408]/95 via-[#071c0b]/72 to-[#071c0b]/25" aria-hidden="true" />
+          <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#071c0b] to-transparent" aria-hidden="true" />
 
           <div className="relative z-20 mx-auto flex min-h-[calc(100svh-92px)] w-full max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
             <div className="max-w-3xl text-white">
@@ -127,7 +143,7 @@ export function HeroCarousel() {
               <h2 className="mt-5 font-['Outfit',sans-serif] text-4xl font-semibold leading-[0.98] text-white sm:text-6xl lg:text-7xl whitespace-pre-line">
                 {slide.title}
               </h2>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#d8e4f3] sm:text-lg">
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#cce0c4] sm:text-lg">
                 {slide.description}
               </p>
 
@@ -149,13 +165,13 @@ export function HeroCarousel() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   to={slide.cta.to}
-                  className="inline-flex items-center gap-1.5 rounded-full bg-[#8bc53f] px-6 py-3 text-sm font-semibold text-[#071846] shadow-[0_2px_12px_rgba(139,197,63,0.35)] transition-all duration-200 hover:bg-[#9fd362] hover:shadow-[0_4px_20px_rgba(139,197,63,0.5)] active:scale-95"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-[#1a4db8] px-6 py-3 text-sm font-semibold text-white shadow-[0_2px_12px_rgba(26,77,184,0.4)] transition-all duration-200 hover:bg-[#2560d4] hover:shadow-[0_4px_20px_rgba(26,77,184,0.55)] active:scale-95"
                 >
                   {slide.cta.label}
                 </Link>
                 <Link
                   to={slide.secondary.to}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-[#e0ebf7] transition-all duration-200 hover:border-[#8bc53f]/60 hover:bg-white/8 hover:text-white active:scale-95"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-[#cce0c4] transition-all duration-200 hover:border-[#8bc53f]/60 hover:bg-white/8 hover:text-white active:scale-95"
                 >
                   {slide.secondary.label}
                 </Link>

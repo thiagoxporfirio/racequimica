@@ -14,7 +14,7 @@ export function LicencasPage() {
       <section className="space-y-5">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Documentação</p>
-          <h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0e2b64]">
+          <h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0f3316]">
             Nossos certificados
           </h2>
         </div>
@@ -26,19 +26,19 @@ export function LicencasPage() {
             >
               <span
                 className="pointer-events-none absolute right-0 top-0 h-28 w-28 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
-                style={{ background: 'rgba(139,197,63,0.12)' }}
+                style={{ background: 'rgba(26,77,184,0.10)' }}
                 aria-hidden="true"
               />
               <div
                 className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl font-['Outfit',sans-serif] text-sm font-bold text-[#8bc53f] shadow-sm"
                 style={{
-                  background: 'linear-gradient(135deg, #071846 0%, #132f68 100%)',
-                  boxShadow: '0 2px 8px rgba(7,24,70,0.3)',
+                  background: 'linear-gradient(135deg, #071c0b 0%, #0f3316 100%)',
+                  boxShadow: '0 2px 8px rgba(7,28,11,0.3)',
                 }}
               >
                 {String(i + 1).padStart(2, '0')}
               </div>
-              <h2 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#0f2a62]">{item}</h2>
+              <h2 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#0f3316]">{item}</h2>
               <p className="mt-2 text-sm leading-relaxed text-[#576278]">
                 Documento com validade, rastreabilidade de lote e observações técnicas aplicáveis.
               </p>

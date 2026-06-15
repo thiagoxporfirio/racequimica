@@ -15,7 +15,7 @@ export function ContatoPage() {
         <article className="rq-scale-in space-y-5 rounded-3xl border border-[#c2ccda]/70 bg-white p-7 shadow-sm">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Nosso time</p>
-            <h2 className="mt-1.5 font-['Outfit',sans-serif] text-2xl font-semibold text-[#102b63]">
+            <h2 className="mt-1.5 font-['Outfit',sans-serif] text-2xl font-semibold text-[#0f3316]">
               Fale com a Race Química
             </h2>
           </div>
@@ -56,22 +56,22 @@ export function ContatoPage() {
             <ul className="space-y-1.5 text-[#4f5d73]">
               <li className="flex justify-between">
                 <span>Horário comercial</span>
-                <span className="font-medium text-[#0e2b66]">08h – 18h</span>
+                <span className="font-medium text-[#0f3316]">08h – 18h</span>
               </li>
               <li className="flex justify-between">
                 <span>Atendimento técnico</span>
-                <span className="font-medium text-[#0e2b66]">Sob demanda</span>
+                <span className="font-medium text-[#0f3316]">Sob demanda</span>
               </li>
               <li className="flex justify-between">
                 <span>Resposta média</span>
-                <span className="font-medium text-[#0e2b66]">Até 1 dia útil</span>
+                <span className="font-medium text-[#0f3316]">Até 1 dia útil</span>
               </li>
             </ul>
             <a
               href={contactInfo.instagram}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-[#8bc53f] px-4 py-2 text-xs font-bold text-[#071846] shadow-sm transition-all duration-200 hover:bg-[#9dd05d] hover:shadow-[0_2px_12px_rgba(139,197,63,0.4)] active:scale-95"
+              className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-[#1a4db8] px-4 py-2 text-xs font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#2560d4] hover:shadow-[0_2px_12px_rgba(26,77,184,0.4)] active:scale-95"
             >
               Abrir Instagram oficial →
             </a>
@@ -85,7 +85,7 @@ export function ContatoPage() {
         >
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Mensagem</p>
-            <h2 className="mt-1.5 font-['Outfit',sans-serif] text-2xl font-semibold text-[#102b63]">
+            <h2 className="mt-1.5 font-['Outfit',sans-serif] text-2xl font-semibold text-[#0f3316]">
               Envie sua solicitação
             </h2>
           </div>
@@ -104,7 +104,7 @@ export function ContatoPage() {
 
           <button
             type="submit"
-            className="w-full rounded-full bg-[#8bc53f] px-7 py-3 text-sm font-semibold text-[#071846] shadow-[0_2px_12px_rgba(139,197,63,0.3)] transition-all duration-200 hover:bg-[#9ed35f] hover:shadow-[0_4px_20px_rgba(139,197,63,0.45)] active:scale-[0.98] sm:w-auto"
+            className="w-full rounded-full bg-[#1a4db8] px-7 py-3 text-sm font-semibold text-white shadow-[0_2px_12px_rgba(26,77,184,0.3)] transition-all duration-200 hover:bg-[#2560d4] hover:shadow-[0_4px_20px_rgba(26,77,184,0.45)] active:scale-[0.98] sm:w-auto"
           >
             Enviar mensagem
           </button>
@@ -115,7 +115,7 @@ export function ContatoPage() {
       <section className="rq-fade-up rq-d300 space-y-4 rounded-3xl border border-[#c2cbda]/70 bg-white p-6 shadow-sm">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">Localização</p>
-          <h2 className="mt-1 font-['Outfit',sans-serif] text-2xl font-semibold text-[#102b63]">
+          <h2 className="mt-1 font-['Outfit',sans-serif] text-2xl font-semibold text-[#0f3316]">
             Race Química — Sertãozinho, SP
           </h2>
           <p className="mt-1 text-sm text-[#566278]">{contactInfo.address}</p>
@@ -137,7 +137,7 @@ export function ContatoPage() {
 function InfoRow({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className="flex items-start gap-3 rounded-xl border border-[#e0e7f0] bg-[#f5f8fc] px-3.5 py-2.5 text-[#4f5d73]">
-      <span className="mt-0.5 shrink-0 text-[#0e2b66]">{icon}</span>
+      <span className="mt-0.5 shrink-0 text-[#0f3316]">{icon}</span>
       <span className="leading-relaxed">{children}</span>
     </div>
   );
@@ -182,7 +182,7 @@ function ContactSocialBtn({
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#9eacc3] text-[#12366f] transition-all duration-200 hover:border-[#8bc53f] hover:text-[#8bc53f] hover:shadow-[0_0_10px_rgba(139,197,63,0.2)]"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#9eacc3] text-[#0f3316] transition-all duration-200 hover:border-[#8bc53f] hover:text-[#8bc53f] hover:shadow-[0_0_10px_rgba(139,197,63,0.2)]"
     >
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
         {children}
