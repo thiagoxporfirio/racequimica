@@ -1,68 +1,129 @@
 @import "tailwindcss";
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
+	html {
+		scroll-behavior: smooth;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+	}
 
-  ::selection {
-    background-color: #1a4db8;
-    color: #ffffff;
-  }
+	::selection {
+		background-color: #1a4db8;
+		color: #ffffff;
+	}
 }
 
 /* ── Keyframes ─────────────────────────────────────────── */
 @keyframes rqFadeUp {
-  from { opacity: 0; transform: translateY(22px); }
-  to   { opacity: 1; transform: translateY(0); }
+	from {
+		opacity: 0;
+		transform: translateY(22px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes rqFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes rqScaleIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1); }
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 @keyframes rqSlideRight {
-  from { opacity: 0; transform: translateX(-16px); }
-  to   { opacity: 1; transform: translateX(0); }
+	from {
+		opacity: 0;
+		transform: translateX(-16px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 @keyframes rqLineGrow {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
 }
 
 /* ── Animation utilities ───────────────────────────────── */
-.rq-fade-up     { animation: rqFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both; }
-.rq-fade-in     { animation: rqFadeIn 0.5s ease both; }
-.rq-scale-in    { animation: rqScaleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
-.rq-slide-right { animation: rqSlideRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
-.rq-line-grow   { animation: rqLineGrow 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; transform-origin: left; }
+.rq-fade-up {
+	animation: rqFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rq-fade-in {
+	animation: rqFadeIn 0.5s ease both;
+}
+.rq-scale-in {
+	animation: rqScaleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rq-slide-right {
+	animation: rqSlideRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rq-line-grow {
+	animation: rqLineGrow 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+	transform-origin: left;
+}
 
 @keyframes rqCarouselProgress {
-  from { width: 0%; }
-  to   { width: 100%; }
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
 }
 
 .rq-carousel-progress {
-  animation: rqCarouselProgress 5.5s linear both;
+	animation: rqCarouselProgress 5.5s linear both;
 }
 
-.rq-d50  { animation-delay: 0.05s; }
-.rq-d100 { animation-delay: 0.10s; }
-.rq-d150 { animation-delay: 0.15s; }
-.rq-d200 { animation-delay: 0.20s; }
-.rq-d300 { animation-delay: 0.30s; }
-.rq-d400 { animation-delay: 0.40s; }
-.rq-d500 { animation-delay: 0.50s; }
-.rq-d600 { animation-delay: 0.60s; }
-.rq-d700 { animation-delay: 0.70s; }
-.rq-d800 { animation-delay: 0.80s; }
+.rq-d50 {
+	animation-delay: 0.05s;
+}
+.rq-d100 {
+	animation-delay: 0.1s;
+}
+.rq-d150 {
+	animation-delay: 0.15s;
+}
+.rq-d200 {
+	animation-delay: 0.2s;
+}
+.rq-d300 {
+	animation-delay: 0.3s;
+}
+.rq-d400 {
+	animation-delay: 0.4s;
+}
+.rq-d500 {
+	animation-delay: 0.5s;
+}
+.rq-d600 {
+	animation-delay: 0.6s;
+}
+.rq-d700 {
+	animation-delay: 0.7s;
+}
+.rq-d800 {
+	animation-delay: 0.8s;
+}
