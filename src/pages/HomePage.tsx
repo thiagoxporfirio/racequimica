@@ -3,9 +3,6 @@ import antiespumanteImg from "../assets/Antiespumante.jpeg";
 import antibioticosImg from "../assets/antibioticos.jpeg";
 import cloritoImg from "../assets/cloritoDeSodio.jpeg";
 import estoque3Img from "../assets/new/estoque3.jpeg";
-import estoque5Img from "../assets/new/estoque5.jpeg";
-import estoquImg from "../assets/new/estoqu.jpeg";
-import usinaImg from "../assets/new/usina.jpeg";
 import monenImg from "../assets/MONEN-PRO.jpg";
 import rcFlokImg from "../assets/rcFlok.jpg";
 import rcCatVideo from "../assets/Polímero cationico RC CAT.mp4";
@@ -61,10 +58,22 @@ const products = [
 ];
 
 const applicationCards = [
-	{ title: "Osmose Reversa e Ultra filtração", image: usinaImg },
-	{ title: "Torres Resfriamento", image: estoquImg },
-	{ title: "Processo de Efluentes", image: estoque5Img },
-	{ title: "Caldeiras", image: estoque3Img }
+	{
+		title: "Osmose Reversa e Ultra filtração",
+		image: "https://www.tecma-tecnologia.com.br/web/wp-content/uploads/2019/11/whatsapp-image-2019-10-23-at-155009.jpeg"
+	},
+	{
+		title: "Torres Resfriamento",
+		image: "https://www.quimica.com.br/wp-content/uploads/2014/08/torres_POST_.jpg"
+	},
+	{
+		title: "Processo de Efluentes",
+		image: "https://www.grupoairslaid.com.br/wp-content/uploads/2020/02/FOTO_1.webp"
+	},
+	{
+		title: "Caldeiras",
+		image: "https://estiva.com.br/var/userfiles/blogthumbs/d6f4f744fca95d6311aa819a08a32a3a.png"
+	}
 ];
 
 export function HomePage() {

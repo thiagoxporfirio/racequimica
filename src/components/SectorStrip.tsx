@@ -5,7 +5,7 @@ const sectors = [
 		key: "etanol",
 		label: "Etanol",
 		image:
-			"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80",
+			"https://imagens-cdn.canalrural.com.br/2026/06/preco-do-etanol-cai-em-18-estados-e-media-nacional-recua-para-r-4-18-por-litro-1024x576.png",
 		description: "Floculação e fermentação sucroalcooleira",
 		tint: "rgba(7,28,11,0.50)"
 	},
@@ -13,7 +13,7 @@ const sectors = [
 		key: "acucar",
 		label: "Açúcar",
 		image:
-			"https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=900&q=80",
+			"https://siamigbioenergia.com.br/wp-content/uploads/2025/01/post1-corpo1-1024x682px.png",
 		description: "Controle de inibidores e rendimento",
 		tint: "rgba(7,28,11,0.44)"
 	},
@@ -21,7 +21,7 @@ const sectors = [
 		key: "organicos",
 		label: "Orgânicos",
 		image:
-			"https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80",
+			"https://www.cetap.org.br/site/wp-content/uploads/2020/05/250520-semana-alimento-organico-750x460.jpg",
 		description: "Biocidas e antibióticos industriais",
 		tint: "rgba(7,28,11,0.52)"
 	},
@@ -29,7 +29,7 @@ const sectors = [
 		key: "aguas",
 		label: "Águas",
 		image:
-			"https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=900&q=80",
+			"https://images.ecycle.com.br/wp-content/uploads/2021/10/07121825/drop-of-water-gee46e2eb0_1920.jpg.webp",
 		description: "Tratamento e controle microbiológico",
 		tint: "rgba(4,20,8,0.54)"
 	},
@@ -37,7 +37,7 @@ const sectors = [
 		key: "industrial",
 		label: "Industrial",
 		image:
-			"https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+			"https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/estatisticas_economicas/2023_07/PIM-Br_HOME_joao_paulo_ceglinski-PETROBRAS.jpg",
 		description: "Soluções para processos industriais",
 		tint: "rgba(7,28,11,0.46)"
 	},
@@ -45,7 +45,7 @@ const sectors = [
 		key: "agricolas",
 		label: "Agrícolas",
 		image:
-			"https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80",
+			"https://goias.gov.br/agrodefesa/wp-content/uploads/sites/49/2024/03/52227342824_0f3c43b916_o.jpg",
 		description: "Antiespumantes e dispersantes de campo",
 		tint: "rgba(7,28,11,0.48)"
 	}
