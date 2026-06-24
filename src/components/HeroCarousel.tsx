@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import antibioticosImg from "../assets/antibioticos.jpeg";
 import cloritoImg from "../assets/cloritoDeSodio.jpeg";
-import estoque2Img from "../assets/new/estoque2.jpeg";
+import raceTodosImg from "../assets/racetodos.jpeg";
+import rodosrcImg from "../assets/rodosrc.jpeg";
 import usinaImg from "../assets/new/usina.jpeg";
 import raceLogo from "../assets/logo.png";
 
@@ -30,7 +31,7 @@ const SLIDES: SlideData[] = [
 		cta: { label: "Conhecer a empresa", to: "/sobre-nos" },
 		secondary: { label: "Falar com especialista", to: "/contato" },
 		showLogo: true,
-		image: estoque2Img,
+		image: raceTodosImg,
 		stats: [
 			{ value: "25+", label: "Anos de mercado" },
 			{ value: "SP", label: "Sertãozinho" }
@@ -44,7 +45,7 @@ const SLIDES: SlideData[] = [
 			"RC FLOK e RC CAT — polímeros aniônico e catiônico de alta eficiência para decantação e tratamento de efluentes nos processos fermentativos.",
 		cta: { label: "Ver portfólio", to: "/#linha-de-produtos" },
 		secondary: { label: "Solicitar proposta", to: "/contato" },
-		image: cloritoImg,
+		image: rodosrcImg,
 		stats: [
 			{ value: "RC", label: "Linha técnica" },
 			{ value: "Alta", label: "Performance" }
@@ -76,6 +77,20 @@ const SLIDES: SlideData[] = [
 		stats: [
 			{ value: "SP", label: "Interior paulista" },
 			{ value: "100%", label: "Foco técnico" }
+		]
+	},
+	{
+		id: 4,
+		eyebrow: "Clorito de Sódio",
+		title: "Controle de\nContaminantes",
+		description:
+			"Linha ETA e Moenda com produtos para controle microbiológico, tratamento de água e biocidas industriais de alta eficiência.",
+		cta: { label: "Ver portfólio", to: "/#linha-de-produtos" },
+		secondary: { label: "Solicitar proposta", to: "/contato" },
+		image: cloritoImg,
+		stats: [
+			{ value: "ETA", label: "Linha" },
+			{ value: "100%", label: "Eficiência" }
 		]
 	}
 ];

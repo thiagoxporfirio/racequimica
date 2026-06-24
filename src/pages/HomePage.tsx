@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
-import antiespumanteImg from "../assets/Antiespumante.jpeg";
-import antibioticosImg from "../assets/antibioticos.jpeg";
-import cloritoImg from "../assets/cloritoDeSodio.jpeg";
-import estoque3Img from "../assets/new/estoque3.jpeg";
-import monenImg from "../assets/MONEN-PRO.jpg";
-import rcFlokImg from "../assets/rcFlok.jpg";
+import estoquImg from "../assets/new/estoqu.jpeg";
 import rcCatVideo from "../assets/Polímero cationico RC CAT.mp4";
 import rcCat2Video from "../assets/new/rccat2.mp4";
 import rcFlokVideo from "../assets/RC FLOK polímero anionico.mp4";
 import { HeroCarousel } from "../components/HeroCarousel";
+import { LinhasProdutos } from "../components/LinhasProdutos";
 import { SectorStrip } from "../components/SectorStrip";
 import { SolucoesQuimicas } from "../components/SolucoesQuimicas";
 import { contactInfo } from "../content/site";
@@ -34,26 +30,6 @@ const videos = [
 		description:
 			"Demonstração do polímero catiônico RC CAT aplicado em campo com resultados técnicos comprovados.",
 		tag: "Demonstração"
-	}
-];
-
-const products = [
-	{
-		title: "Clorito de Sódio",
-		image: cloritoImg,
-		tag: "Controle microbiológico"
-	},
-	{
-		title: "Antibióticos Sólidos e Líquidos",
-		image: antibioticosImg,
-		tag: "Fermentação"
-	},
-	{ title: "Linha MONEN-PRO", image: monenImg, tag: "Alta performance" },
-	{ title: "RC FLOK", image: rcFlokImg, tag: "Floculação" },
-	{
-		title: "Antiespumante e Dispersante",
-		image: antiespumanteImg,
-		tag: "Eficiência operacional"
 	}
 ];
 
@@ -152,7 +128,7 @@ export function HomePage() {
 					}}
 				>
 					<img
-						src={estoque3Img}
+						src={estoquImg}
 						alt="Estoque e logística Race Química"
 						className="h-full w-full rounded-2xl object-cover transition duration-500 hover:scale-[1.02]"
 					/>
@@ -303,63 +279,8 @@ export function HomePage() {
 			{/* Solucoes Quimicas */}
 			<SolucoesQuimicas />
 
-			{/* Products */}
-			<section id="linha-de-produtos" className="space-y-6">
-				<div className="flex items-end justify-between">
-					<div>
-						<p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8bc53f]">
-							Portfólio
-						</p>
-						<h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0f3316]">
-							Linha de produtos
-						</h2>
-					</div>
-					<Link
-						to="/contato"
-						className="hidden text-sm font-medium text-[#0f3316] underline-offset-4 transition hover:text-[#1a4db8] hover:underline sm:block"
-					>
-						Solicitar catálogo →
-					</Link>
-				</div>
-
-				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-					{products.map((product, index) => (
-						<article
-							key={product.title}
-							className={`rq-fade-up rq-d${Math.min((index + 1) * 100, 500)} group relative overflow-hidden rounded-2xl border border-[#c3ccda]/70 bg-white shadow-sm transition-all duration-300 hover:border-[#8bc53f]/30 hover:shadow-lg hover:shadow-[#0f3316]/10`}
-						>
-							<div className="relative h-64 overflow-hidden bg-[#f0f4f8]">
-								<img
-									src={product.image}
-									alt={product.title}
-									className="h-full w-full object-contain p-3 transition duration-500 group-hover:scale-105"
-								/>
-								<div
-									className="absolute inset-0 bg-[#071c0b]/8 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-t-2xl"
-									aria-hidden="true"
-								/>
-								<span className="absolute right-3 top-3 rounded-full border border-[#0f3316]/20 bg-white/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#0f3316] backdrop-blur-sm">
-									{product.tag}
-								</span>
-							</div>
-							<div className="p-5">
-								<p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#5a6478]">
-									Produto {String(index + 1).padStart(2, "0")}
-								</p>
-								<h3 className="mt-1.5 font-['Outfit',sans-serif] text-xl font-semibold text-[#0f3316] transition-colors group-hover:text-[#1a4db8]">
-									{product.title}
-								</h3>
-								<span
-									className="mt-3 block h-[2px] w-10 rounded-full transition-all duration-300 group-hover:w-16"
-									style={{
-										background: "linear-gradient(90deg, #8bc53f, #bedd8c)"
-									}}
-								/>
-							</div>
-						</article>
-					))}
-				</div>
-			</section>
+			{/* Linhas de produtos */}
+			<LinhasProdutos />
 		</div>
 	);
 }
