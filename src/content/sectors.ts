@@ -102,16 +102,6 @@ export const sectors: Sector[] = [
 				]
 			},
 			{
-				key: "efluentes",
-				label: "Processo de Efluentes",
-				image: "https://www.grupoairslaid.com.br/wp-content/uploads/2020/02/FOTO_1.webp",
-				products: [
-					"Alcalinizantes",
-					"Coagulantes",
-					"Eliminador de odor"
-				]
-			},
-			{
 				key: "caldeiras",
 				label: "Caldeiras",
 				image: "https://estiva.com.br/var/userfiles/blogthumbs/d6f4f744fca95d6311aa819a08a32a3a.png",
@@ -128,19 +118,16 @@ export const sectors: Sector[] = [
 				]
 			},
 			{
-				key: "agua-potavel",
-				label: "Água potável",
-				image: "https://images.ecycle.com.br/wp-content/uploads/2021/10/07121825/drop-of-water-gee46e2eb0_1920.jpg.webp",
-				products: [
-					"Tricloro"
-				]
-			},
-			{
 				key: "eta",
 				label: "ETA",
 				image: "https://www.grupoairslaid.com.br/wp-content/uploads/2020/02/FOTO_1.webp",
 				products: [
-					"Hipoclorito de cálcio"
+					"Polímero",
+					"PAC",
+					"Barrilha leve",
+					"Hipoclorito de sódio",
+					"Sulfato de alumínio",
+					"Tanino"
 				]
 			}
 		]
