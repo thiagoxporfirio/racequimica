@@ -5,6 +5,7 @@ export type NavigationItem = {
 
 export const navigationItems: NavigationItem[] = [
 	{ label: "Home", to: "/" },
+	{ label: "Produtos", to: "/produtos" },
 	{ label: "Sobre Nos", to: "/sobre-nos" },
 	{ label: "Licencas e Certificados", to: "/licencas-e-certificados" },
 	{ label: "Contato", to: "/contato" }
@@ -25,8 +26,8 @@ export const contactInfo = {
 	about: "Profissionais com mais de 25 anos de experiencia.",
 	address:
 		"Laura Vieira da Silva Bonbonati N 284 e 274, Sertaozinho, Sao Paulo, Brazil, 14.161-000",
-	phone: "(16) 3948-0777",
-	whatsapp: "https://wa.me/551639480777",
+	phone: "(16) 98197-2773",
+	whatsapp: "https://wa.me/5516981972773",
 	instagram: "https://www.instagram.com/racequimica.ind.br/",
 	linkedin: "https://www.linkedin.com/",
 	mapEmbedUrl:

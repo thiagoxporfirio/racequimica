@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { ScrollToTop } from "./ScrollToTop";
 
 export function SiteLayout() {
 	return (
@@ -27,6 +28,7 @@ export function SiteLayout() {
 				}}
 				aria-hidden="true"
 			/>
+			<ScrollToTop />
 			<Header />
 			<main className="mx-auto w-full max-w-7xl px-4 pt-10 pb-16 sm:px-6 lg:px-8">
 				<Outlet />
