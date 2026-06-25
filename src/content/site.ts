@@ -6,26 +6,26 @@ export type NavigationItem = {
 export const navigationItems: NavigationItem[] = [
 	{ label: "Home", to: "/" },
 	{ label: "Produtos", to: "/produtos" },
-	{ label: "Sobre Nos", to: "/sobre-nos" },
-	{ label: "Licencas e Certificados", to: "/licencas-e-certificados" },
+	{ label: "Sobre Nós", to: "/sobre-nos" },
+	{ label: "Licenças e Certificados", to: "/licencas-e-certificados" },
 	{ label: "Contato", to: "/contato" }
 ];
 
 export const certificateItems = [
-	"Licenca Ambiental",
+	"Licença Ambiental",
 	"FISPQ Atualizada",
 	"Controle de Transporte",
 	"Laudo de Qualidade",
-	"Rastreabilidade de lote",
-	"Treinamento NR aplicado"
+	"Rastreabilidade de Lote",
+	"Treinamento NR Aplicado"
 ];
 
 export const contactInfo = {
-	title: "Race Quimica",
-	slogan: "Quimica de alta performance",
-	about: "Profissionais com mais de 25 anos de experiencia.",
+	title: "Race Química",
+	slogan: "Química de alta performance",
+	about: "Profissionais com mais de 25 anos de experiência.",
 	address:
-		"Laura Vieira da Silva Bonbonati N 284 e 274, Sertaozinho, Sao Paulo, Brazil, 14.161-000",
+		"Laura Vieira da Silva Bonbonati N 284 e 274, Sertãozinho, São Paulo, Brasil, 14.161-000",
 	phone: "(16) 98197-2773",
 	whatsapp: "https://wa.me/5516981972773",
 	instagram: "https://www.instagram.com/racequimica.ind.br/",

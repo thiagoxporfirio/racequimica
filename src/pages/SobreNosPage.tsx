@@ -5,15 +5,15 @@ import logo from "../assets/logo.png";
 import { contactInfo } from "../content/site";
 
 const highlights = [
-	{ value: "25+", label: "anos de experiencia" },
-	{ value: "SP", label: "base em Sertaozinho" },
-	{ value: "24h", label: "canal tecnico ativo" }
+	{ value: "25+", label: "anos de experiência" },
+	{ value: "SP", label: "base em Sertãozinho" },
+	{ value: "24h", label: "canal técnico ativo" }
 ];
 
 const pillars = [
 	{
-		title: "Missao",
-		text: "Fornecer solucoes quimicas de alta performance para processos industriais, com atendimento tecnico, qualidade no produto e foco em resultado operacional.",
+		title: "Missão",
+		text: "Fornecer soluções químicas de alta performance para processos industriais, com atendimento técnico, qualidade no produto e foco em resultado operacional.",
 		icon: (
 			<path
 				strokeLinecap="round"
@@ -23,8 +23,8 @@ const pillars = [
 		)
 	},
 	{
-		title: "Visao",
-		text: "Ser reconhecida pela confianca tecnica no setor sucroenergetico e por parcerias consistentes com industrias que buscam produtividade e seguranca.",
+		title: "Visão",
+		text: "Ser reconhecida pela confiança técnica no setor sucroenergético e por parcerias consistentes com indústrias que buscam produtividade e segurança.",
 		icon: (
 			<path
 				strokeLinecap="round"
@@ -35,7 +35,7 @@ const pillars = [
 	},
 	{
 		title: "Valores",
-		text: "Responsabilidade, transparencia, melhoria continua, respeito aos clientes e compromisso com praticas seguras em toda a cadeia de fornecimento.",
+		text: "Responsabilidade, transparência, melhoria contínua, respeito aos clientes e compromisso com práticas seguras em toda a cadeia de fornecimento.",
 		icon: (
 			<path
 				strokeLinecap="round"
@@ -49,18 +49,18 @@ const pillars = [
 const timeline = [
 	{
 		year: "Origem",
-		title: "Experiencia aplicada ao setor industrial",
-		text: "A Race Quimica nasceu da vivencia tecnica de profissionais com mais de duas decadas em processos de fermentacao, controle microbiologico e tratamento."
+		title: "Experiência aplicada ao setor industrial",
+		text: "A Race Química nasceu da vivência técnica de profissionais com mais de duas décadas em processos de fermentação, controle microbiológico e tratamento."
 	},
 	{
 		year: "Hoje",
-		title: "Atendimento proximo e fornecimento confiavel",
-		text: "Com base em Sertaozinho-SP, a empresa atende usinas e industrias com produtos selecionados, suporte comercial direto e acompanhamento das necessidades de campo."
+		title: "Atendimento próximo e fornecimento confiável",
+		text: "Com base em Sertãozinho-SP, a empresa atende usinas e indústrias com produtos selecionados, suporte comercial direto e acompanhamento das necessidades de campo."
 	},
 	{
 		year: "Futuro",
-		title: "Pesquisa, qualidade e evolucao continua",
-		text: "O foco e ampliar solucoes que reduzem perdas, melhoram estabilidade operacional e sustentam relacoes tecnicas de longo prazo."
+		title: "Pesquisa, qualidade e evolução contínua",
+		text: "O foco é ampliar soluções que reduzem perdas, melhoram estabilidade operacional e sustentam relações técnicas de longo prazo."
 	}
 ];
 
@@ -70,7 +70,7 @@ export function SobreNosPage() {
 			<section className="rq-fade-up relative min-h-[520px] overflow-hidden rounded-[28px] bg-[#071c0b] text-white shadow-[0_18px_50px_rgba(7,28,11,0.3)]">
 				<img
 					src={estoque3Img}
-					alt="Estrutura de estoque e operacao da Race Quimica"
+					alt="Estrutura de estoque e operação da Race Química"
 					className="absolute inset-0 h-full w-full object-cover"
 				/>
 				<div className="absolute inset-0 bg-[#071c0b]/62" aria-hidden="true" />
@@ -83,7 +83,7 @@ export function SobreNosPage() {
 					<div className="mb-10 flex items-center justify-between gap-6">
 						<img
 							src={logo}
-							alt="Race Quimica"
+							alt="Race Química"
 							className="h-14 w-auto rounded-md p-2 shadow-lg sm:h-16"
 						/>
 						<span
@@ -93,14 +93,14 @@ export function SobreNosPage() {
 					</div>
 
 					<p className="rq-slide-right text-sm font-semibold uppercase tracking-[0.32em] text-[#bedd8c]">
-						Sobre nos
+						Sobre Nós
 					</p>
 					<h1 className="mt-4 max-w-4xl font-['Outfit',sans-serif] text-4xl font-semibold leading-tight sm:text-6xl">
-						Quimica de alta performance para processos industriais.
+						Química de alta performance para processos industriais.
 					</h1>
 					<p className="mt-5 max-w-2xl text-base leading-relaxed text-white/82">
-						A Race Quimica combina experiencia de mercado, atendimento direto e
-						solucoes voltadas a eficiencia produtiva no setor sucroenergetico.
+						A Race Química combina experiência de mercado, atendimento direto e
+						soluções voltadas à eficiência produtiva no setor sucroenergético.
 					</p>
 
 					<div className="mt-10 grid gap-3 sm:grid-cols-3">
@@ -124,21 +124,21 @@ export function SobreNosPage() {
 			<section className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
 				<div className="rq-fade-up space-y-4">
 					<p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#8bc53f]">
-						Nossa historia
+						Nossa História
 					</p>
 					<h2 className="font-['Outfit',sans-serif] text-3xl font-semibold leading-tight text-[#0f3316] sm:text-4xl">
-						Experiencia tecnica, presenca regional e compromisso com qualidade.
+						Experiência técnica, presença regional e compromisso com qualidade.
 					</h2>
 					<p className="text-sm leading-relaxed text-[#4f5f77]">
 						{contactInfo.title} atua em {contactInfo.slogan.toLowerCase()}, com
-						profissionais que acumulam mais de 25 anos de experiencia em
-						operacoes industriais. A empresa esta instalada em Sertaozinho, um
-						dos principais polos do setor sucroenergetico brasileiro.
+						profissionais que acumulam mais de 25 anos de experiência em
+						operações industriais. A empresa está instalada em Sertãozinho, um
+						dos principais polos do setor sucroenergético brasileiro.
 					</p>
 					<p className="text-sm leading-relaxed text-[#4f5f77]">
-						O trabalho e conduzido com proximidade comercial, leitura tecnica
+						O trabalho é conduzido com proximidade comercial, leitura técnica
 						dos processos e busca constante por produtos que melhorem
-						estabilidade, seguranca e custo-beneficio para clientes e parceiros.
+						estabilidade, segurança e custo-benefício para clientes e parceiros.
 					</p>
 				</div>
 
@@ -168,10 +168,10 @@ export function SobreNosPage() {
 				<div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
 					<div>
 						<p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#8bc53f]">
-							Principios
+							Princípios
 						</p>
 						<h2 className="mt-1 font-['Outfit',sans-serif] text-3xl font-semibold text-[#0f3316]">
-							Missao, visao e valores
+							Missão, visão e valores
 						</h2>
 					</div>
 					<span
@@ -197,7 +197,7 @@ export function SobreNosPage() {
 			<section className="relative overflow-hidden rounded-[28px] bg-[#071c0b] text-white shadow-[0_16px_45px_rgba(7,28,11,0.28)]">
 				<img
 					src={cloritoImg}
-					alt="Produto quimico Race Quimica"
+					alt="Produto químico Race Química"
 					className="absolute right-0 top-0 hidden h-full w-1/2 object-cover opacity-35 lg:block"
 				/>
 				<div
@@ -207,7 +207,7 @@ export function SobreNosPage() {
 				<div className="relative grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-14 lg:py-14">
 					<div>
 						<p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#bedd8c]">
-							Politica da qualidade
+							Política da Qualidade
 						</p>
 						<h2 className="mt-3 font-['Outfit',sans-serif] text-3xl font-semibold leading-tight sm:text-4xl">
 							Responsabilidade documentada em cada etapa.
@@ -216,25 +216,25 @@ export function SobreNosPage() {
 					<div className="space-y-5 text-sm leading-relaxed text-white/84">
 						<p>
 							Atender aos requisitos dos clientes e demais requisitos
-							aplicaveis, mantendo controles que sustentem qualidade,
-							rastreabilidade e confianca no fornecimento.
+							aplicáveis, mantendo controles que sustentem qualidade,
+							rastreabilidade e confiança no fornecimento.
 						</p>
 						<ul className="grid gap-3 sm:grid-cols-2">
 							<QualityItem>
-								Melhoria continua dos processos e controles internos.
+								Melhoria contínua dos processos e controles internos.
 							</QualityItem>
 							<QualityItem>
-								Produtos direcionados a eficiencia em processos industriais.
+								Produtos direcionados à eficiência em processos industriais.
 							</QualityItem>
 							<QualityItem>
-								Equipe capacitada para atendimento tecnico e comercial.
+								Equipe capacitada para atendimento técnico e comercial.
 							</QualityItem>
 							<QualityItem>
-								Conduta responsavel nas relacoes com clientes e parceiros.
+								Conduta responsável nas relações com clientes e parceiros.
 							</QualityItem>
 						</ul>
 						<p className="border-t border-white/15 pt-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#bedd8c]">
-							Departamento de Qualidade Race Quimica
+							Departamento de Qualidade Race Química
 						</p>
 					</div>
 				</div>

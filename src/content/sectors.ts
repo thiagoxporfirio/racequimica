@@ -34,7 +34,7 @@ export const sectors: Sector[] = [
 					"Biocidas",
 					"Dióxido de Cloro",
 					"Dispersantes",
-					"Neutralizantes de PH",
+					"Neutralizantes de pH",
 					"Nutrientes"
 				]
 			}
