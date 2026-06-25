@@ -74,7 +74,7 @@ export const sectors: Sector[] = [
 		subLines: [
 			{
 				key: "osmose-reversa",
-				label: "Osmose Reversa e Ultra filtração",
+				label: "Osmose Reversa e Ultra Filtração",
 				image: "https://www.tecma-tecnologia.com.br/web/wp-content/uploads/2019/11/whatsapp-image-2019-10-23-at-155009.jpeg",
 				products: [
 					"Biocidas",
