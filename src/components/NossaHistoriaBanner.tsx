@@ -50,7 +50,7 @@ export function NossaHistoriaBanner() {
 					<p className="mt-5 text-sm leading-relaxed text-[#2d4a35]">
 						A Race Química desenvolve soluções químicas de alta performance para a
 						indústria sucroalcooleira e de tratamento de água, com mais de 25 anos
-						de experiência e compromisso com excelência, ética e constante evolução
+						de experiência no setor sucroenergético e compromisso com excelência, ética e constante evolução
 						tecnológica.
 					</p>
 					<Link

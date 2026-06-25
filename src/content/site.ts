@@ -23,7 +23,7 @@ export const certificateItems = [
 export const contactInfo = {
 	title: "Race Química",
 	slogan: "Química de alta performance",
-	about: "Profissionais com mais de 25 anos de experiência.",
+	about: "Profissionais com mais de 25 anos de experiência no setor sucroenergético.",
 	address:
 		"Laura Vieira da Silva Bonbonati N 284 e 274, Sertãozinho, São Paulo, Brasil, 14.161-000",
 	phone: "(16) 98197-2773",

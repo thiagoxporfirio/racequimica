@@ -131,8 +131,8 @@ export function SobreNosPage() {
 					</h2>
 					<p className="text-sm leading-relaxed text-[#4f5f77]">
 						{contactInfo.title} atua em {contactInfo.slogan.toLowerCase()}, com
-						profissionais que acumulam mais de 25 anos de experiência em
-						operações industriais. A empresa está instalada em Sertãozinho, um
+						profissionais que acumulam mais de 25 anos de experiência no
+						setor sucroenergético. A empresa está instalada em Sertãozinho, um
 						dos principais polos do setor sucroenergético brasileiro.
 					</p>
 					<p className="text-sm leading-relaxed text-[#4f5f77]">

@@ -33,7 +33,7 @@ const SLIDES: SlideData[] = [
 		showLogo: true,
 		image: raceTodosImg,
 		stats: [
-			{ value: "25+", label: "Anos de mercado" },
+			{ value: "25+", label: "Anos de experiência no setor sucroenergetico" },
 			{ value: "SP", label: "Sertãozinho" }
 		]
 	},
