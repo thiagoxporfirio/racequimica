@@ -27,7 +27,7 @@ const SLIDES: SlideData[] = [
 		eyebrow: "25 anos de experiência",
 		title: "Química de Alta\nPerformance Industrial",
 		description:
-			"Especialistas em soluções para fermentação, tratamento de efluentes e controle microbiológico. Presença em Sertãozinho-SP com mais de 25 anos entregando resultado.",
+			"Profissionais com mais de 25 anos de experiência, sede em Sertãozinho-SP.",
 		cta: { label: "Conhecer a empresa", to: "/sobre-nos" },
 		secondary: { label: "Falar com especialista", to: "/contato" },
 		showLogo: true,
