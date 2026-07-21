@@ -10,12 +10,9 @@ export function CertificatesSection() {
 			<div className="mx-auto w-full max-w-screen-2xl px-6 py-14 sm:px-10 lg:px-16">
 				<div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
 					<div className="rq-slide-right">
-						<p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#1a4db8]">
+						<p className="text-[16px] font-bold uppercase tracking-[0.22em] text-[#1a4db8]">
 							Certificações
 						</p>
-						<h2 className="mt-2 max-w-xl font-['Outfit',sans-serif] text-3xl font-semibold leading-tight text-[#0f3316] sm:text-4xl">
-							Qualidade documentada para mercados com requisitos específicos
-						</h2>
 						<p className="mt-4 max-w-xl text-sm leading-relaxed text-[#576278]">
 							A Race Química disponibiliza certificados para consulta técnica,
 							apoiando auditorias, homologações e processos de compra com
