@@ -10,6 +10,7 @@ import carroselHImg from "../assets/new/carroselH.jpeg";
 import estoque2Img from "../assets/new/estoque2.jpeg";
 import estoque3Img from "../assets/new/estoque3.jpeg";
 import estoque5Img from "../assets/new/estoque5.jpeg";
+import { CertificatesSection } from "../components/CertificatesSection";
 import { CtaBanner } from "../components/CtaBanner";
 import { HeroCarousel } from "../components/HeroCarousel";
 import { LinhaAguas } from "../components/LinhaAguas";
@@ -265,6 +266,8 @@ export function HomePage() {
 			</section>
 
 			<CtaBanner />
+
+			<CertificatesSection />
 
 		</div>
 	);

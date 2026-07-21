@@ -11,13 +11,31 @@ export const navigationItems: NavigationItem[] = [
 	{ label: "Contato", to: "/contato" }
 ];
 
-export const certificateItems = [
-	"Licença Ambiental",
-	"FISPQ Atualizada",
-	"Controle de Transporte",
-	"Laudo de Qualidade",
-	"Rastreabilidade de Lote",
-	"Treinamento NR Aplicado"
+export type CertificateItem = {
+	title: string;
+	label: string;
+	description: string;
+	file: string;
+	icon: string;
+};
+
+export const certificateItems: CertificateItem[] = [
+	{
+		title: "Certificação Kosher",
+		label: "Kosher",
+		description:
+			"Documento de certificação para atendimento a requisitos específicos de produção, fornecimento e controle.",
+		file: "/assets/2026071803koshercertification.pdf",
+		icon: "/assets/kosher-icon.png"
+	},
+	{
+		title: "Certificação Halal",
+		label: "Halal",
+		description:
+			"Certificado voltado a processos e produtos que seguem os critérios aplicáveis de conformidade Halal.",
+		file: "/assets/2026071804halal.pdf",
+		icon: "/assets/halal-icon.png"
+	}
 ];
 
 export const contactInfo = {

@@ -22,9 +22,12 @@ export function LicencasPage() {
 				</div>
 				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{certificateItems.map((item, i) => (
-						<article
-							key={item}
-							className={`rq-fade-up rq-d${Math.min((i + 1) * 100, 600)} group relative overflow-hidden rounded-2xl border border-[#c2cbda]/70 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#8bc53f]/35 hover:shadow-md hover:shadow-[#8bc53f]/8`}
+						<a
+							key={item.title}
+							href={item.file}
+							target="_blank"
+							rel="noreferrer"
+							className={`rq-fade-up rq-d${Math.min((i + 1) * 100, 600)} group relative overflow-hidden rounded-lg border border-[#c2cbda]/70 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#8bc53f]/35 hover:shadow-md hover:shadow-[#8bc53f]/8`}
 						>
 							<span
 								className="pointer-events-none absolute right-0 top-0 h-28 w-28 rounded-full opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
@@ -32,21 +35,28 @@ export function LicencasPage() {
 								aria-hidden="true"
 							/>
 							<div
-								className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl font-['Outfit',sans-serif] text-sm font-bold text-[#8bc53f] shadow-sm"
+								className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-2 shadow-sm"
 								style={{
-									background:
-										"linear-gradient(135deg, #071c0b 0%, #0f3316 100%)",
 									boxShadow: "0 2px 8px rgba(7,28,11,0.3)"
 								}}
 							>
-								{String(i + 1).padStart(2, "0")}
+								<div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-white">
+									<img
+										src={item.icon}
+										alt={`Selo ${item.label}`}
+										className="h-10 w-10 object-contain"
+										loading="lazy"
+									/>
+								</div>
 							</div>
 							<h2 className="font-['Outfit',sans-serif] text-lg font-semibold text-[#0f3316]">
-								{item}
+								{item.title}
 							</h2>
 							<p className="mt-2 text-sm leading-relaxed text-[#576278]">
-								Documento com validade, rastreabilidade de lote e observações
-								técnicas aplicáveis.
+								{item.description}
+							</p>
+							<p className="mt-4 text-sm font-semibold text-[#1a4db8]">
+								Abrir certificado em PDF
 							</p>
 							<span
 								className="mt-4 block h-[2px] w-10 rounded-full transition-all duration-300 group-hover:w-14"
@@ -54,7 +64,7 @@ export function LicencasPage() {
 									background: "linear-gradient(90deg, #8bc53f, #bedd8c)"
 								}}
 							/>
-						</article>
+						</a>
 					))}
 				</div>
 			</section>
